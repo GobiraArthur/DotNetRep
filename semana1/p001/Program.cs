@@ -86,7 +86,7 @@ string str2 = "World";
 bool resultado2 = str1 == str2;
 Console.WriteLine(resultado2);
 
-/*Problema: Suponha que você tenha duas variáveis booleanas, bool condicao1 = true
+/*Problema7: Suponha que você tenha duas variáveis booleanas, bool condicao1 = true
 e bool condicao2 = false. Escreva código para verificar se ambas as condições são
 verdadeiras e exiba o resultado.*/
 
@@ -95,7 +95,7 @@ bool condicao2 = false;
 bool resultado3 = condicao1 && condicao2;
 Console.WriteLine(resultado3);
 
-/*Problema: Dadas as variáveis int num1 = 7, int num2 = 3, e int num3 = 10, escreva
+/*Problema8: Dadas as variáveis int num1 = 7, int num2 = 3, e int num3 = 10, escreva
 código para verificar se num1 é maior do que num2 e se num3 é igual a num1 + num2.*/
 
 int num1 = 7;
