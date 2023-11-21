@@ -77,7 +77,7 @@ class Task
     {
         listTask();
         Console.WriteLine("Qual tarefa deseja marcar como concluída?");
-        int choice = int.Parse(Console.ReadLine());
+        int choice = int.Parse(Console.ReadLine()!);
         tasks[choice - 1].Completed = true;
         Console.WriteLine("Tarefa marcada como concluída!");
 
@@ -86,25 +86,25 @@ class Task
     {
         listTask();
         Console.WriteLine("Qual tarefa deseja excluir?");
-        int choice = int.Parse(Console.ReadLine());
+        int choice = int.Parse(Console.ReadLine()!);
         tasks.RemoveAt(choice - 1);
         Console.WriteLine("Tarefa excluída!");
     }
     public void addTask()
     {
         Console.WriteLine("Qual o título da tarefa?");
-        string title = Console.ReadLine();
+        string title = Console.ReadLine()!;
         Console.WriteLine("Qual a descrição da tarefa?");
-        string description = Console.ReadLine();
+        string description = Console.ReadLine()!;
         Console.WriteLine("Qual a data limite da tarefa yyyy-mm-dd?");
-        DateTime deadline = DateTime.Parse(Console.ReadLine());
+        DateTime deadline = DateTime.Parse(Console.ReadLine()!);
         tasks.Add(new Task(title, description, false, deadline));
         Console.WriteLine("Tarefa adicionada!");
     }
     public void searchTask()
     {
         Console.WriteLine("Qual a palavra-chave?");
-        string search = Console.ReadLine().ToLower();
+        string search = Console.ReadLine()!.ToLower();
         var result = tasks.Where(task => task.Title.Contains(search) || task.Description.Contains(search)).ToList();
         foreach (var task in result)
         {
@@ -125,13 +125,13 @@ class Task
     {
         listTask();
         Console.WriteLine("Qual tarefa deseja editar?");
-        int choice = int.Parse(Console.ReadLine());
+        int choice = int.Parse(Console.ReadLine()!);
         Console.WriteLine("Qual o novo tiítulo?");
-        tasks[choice - 1].Title = Console.ReadLine();
+        tasks[choice - 1].Title = Console.ReadLine()!;
         Console.WriteLine("Qual a nova descrição?");
-        tasks[choice - 1].Description = Console.ReadLine();
+        tasks[choice - 1].Description = Console.ReadLine()!;
         Console.WriteLine("Qual a nova data limite yyyy-mm-dd?");
-        tasks[choice - 1].deadline = DateTime.Parse(Console.ReadLine());
+        tasks[choice - 1].deadline = DateTime.Parse(Console.ReadLine()!);
         Console.WriteLine("Tarefa editada!");
     }
 
@@ -162,7 +162,7 @@ namespace MeuProjeto
                 Console.WriteLine("6. Estatísticas");
                 Console.WriteLine("0. Sair");
                 Console.WriteLine("Escolha uma opção:");
-                int choice = int.Parse(Console.ReadLine());
+                int choice = int.Parse(Console.ReadLine()!);
                 switch (choice)
                 {
                     case 1:
